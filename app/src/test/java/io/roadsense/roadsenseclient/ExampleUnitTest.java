@@ -1,4 +1,4 @@
-package io.roadsense.roadsenseclient;
+package my.hackathon.myspin;
 
 import org.junit.Test;
 

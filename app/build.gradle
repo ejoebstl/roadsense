@@ -6,7 +6,7 @@ android {
     buildToolsVersion "23.0.2"
 
     defaultConfig {
-        applicationId "io.roadsense.roadsenseclient"
+        applicationId "com.hackathon.myspin"
         minSdkVersion 18
         targetSdkVersion 23
         versionCode 1
@@ -17,6 +17,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
     }
 }
 
