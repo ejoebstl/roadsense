@@ -413,7 +413,18 @@ public class ConnectorActivity extends AppCompatActivity implements LocationList
             @Override
             public void run() {
                 TextView logView = (TextView)findViewById(R.id.dataView);
-                logView.setText(msg + "\n\n" + Calendar.getInstance().getTime().toString());
+                String[] lines = logView.getText().toString().split("\n");
+
+                StringBuilder builder = new StringBuilder();
+
+                for(int i = Math.max(0, lines.length - 4); i < lines.length; i++) {
+                    builder.append(lines[i]);
+                    builder.append("\n");
+                }
+
+                builder.append(msg);
+
+                logView.setText(builder.toString());
             }
         });
     }
